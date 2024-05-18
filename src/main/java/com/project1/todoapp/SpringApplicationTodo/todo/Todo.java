@@ -2,9 +2,12 @@ package com.project1.todoapp.SpringApplicationTodo.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
 	private int Id;
 	private String userName;
+	@Size(min=10,message="Min 10 chars required")
 	private String description;
 	private LocalDate targetDate;
 	private boolean done;
